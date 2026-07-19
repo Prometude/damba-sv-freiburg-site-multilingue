@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Pool } from "pg";
 import nodemailer from "nodemailer";
+import { resolve4 } from "dns/promises";
 
 export const runtime = "nodejs";
 
@@ -74,10 +75,14 @@ async function sendNotification(member: Record<string, unknown>, id: string) {
     return;
   }
 
+  const smtpHost = process.env.SMTP_HOST as string;
+  const [smtpIpv4] = await resolve4(smtpHost);
+
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
+    host: smtpIpv4,
     port: Number(process.env.SMTP_PORT || 587),
     secure: process.env.SMTP_SECURE === "true",
+    tls: { servername: smtpHost },
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
