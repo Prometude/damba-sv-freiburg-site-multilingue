@@ -1664,3 +1664,11 @@ select {
     min-height: 57px;
   }
 }
+
+cat >> app/globals.css <<'EOF'
+
+.cta-box h2 {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  line-height: 1.08;
+}
+EOF
