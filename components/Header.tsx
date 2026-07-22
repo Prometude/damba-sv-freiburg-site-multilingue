@@ -36,10 +36,16 @@ export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  /*
+   * Ferme le menu mobile lorsqu’on change de page.
+   */
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
+  /*
+   * Empêche la page de défiler lorsque le menu mobile est ouvert.
+   */
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("menu-open");
@@ -52,13 +58,19 @@ export default function Header() {
     };
   }, [menuOpen]);
 
+  function closeMobileMenu() {
+    setMenuOpen(false);
+  }
+
   return (
     <header className="site-header">
       <div className="header-container">
+        {/* Logo et nom du club */}
         <Link
           href="/"
           className="header-logo"
           aria-label="Retour à l’accueil"
+          onClick={closeMobileMenu}
         >
           <Image
             src="/logo-damba.png"
@@ -70,32 +82,47 @@ export default function Header() {
           />
 
           <div className="header-brand">
-            <span className="header-brand-name">Damba SV Freiburg</span>
+            <span className="header-brand-name">
+              Damba SV Freiburg
+            </span>
+
             <span className="header-brand-tagline">
               Football • Intégration • Solidarité
             </span>
           </div>
         </Link>
 
-        <nav className="desktop-navigation" aria-label="Navigation principale">
+        {/* Navigation sur ordinateur */}
+        <nav
+          className="desktop-navigation"
+          aria-label="Navigation principale"
+        >
           {navigation.map((item) => (
             <Link key={item.href} href={item.href}>
               {item.label}
             </Link>
           ))}
 
+          {/* Lien vers la page dédiée d’inscription */}
           <Link href="/inscription" className="header-cta">
             Devenir membre
           </Link>
         </nav>
 
+        {/* Bouton du menu mobile */}
         <button
           type="button"
-          className={`mobile-menu-button ${menuOpen ? "is-open" : ""}`}
-          onClick={() => setMenuOpen((currentValue) => !currentValue)}
+          className={`mobile-menu-button ${
+            menuOpen ? "is-open" : ""
+          }`}
+          onClick={() =>
+            setMenuOpen((currentValue) => !currentValue)
+          }
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
-          aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={
+            menuOpen ? "Fermer le menu" : "Ouvrir le menu"
+          }
         >
           <span />
           <span />
@@ -103,19 +130,31 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Navigation sur téléphone */}
       <nav
         id="mobile-navigation"
-        className={`mobile-navigation ${menuOpen ? "is-open" : ""}`}
+        className={`mobile-navigation ${
+          menuOpen ? "is-open" : ""
+        }`}
         aria-label="Navigation mobile"
       >
         <div className="mobile-navigation-content">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={closeMobileMenu}
+            >
               {item.label}
             </Link>
           ))}
 
-          <Link href="/inscription" className="mobile-navigation-cta">
+          {/* Lien mobile vers la page dédiée d’inscription */}
+          <Link
+            href="/inscription"
+            className="mobile-navigation-cta"
+            onClick={closeMobileMenu}
+          >
             Devenir membre
           </Link>
         </div>
