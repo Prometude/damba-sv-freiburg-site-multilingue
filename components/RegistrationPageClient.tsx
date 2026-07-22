@@ -28,9 +28,17 @@ export default function RegistrationPageClient() {
             <p>{t("registration.description")}</p>
 
             <div className="registration-benefits">
-              <span>✓ {t("registration.benefit.activities")}</span>
-              <span>✓ {t("registration.benefit.integration")}</span>
-              <span>✓ {t("registration.benefit.community")}</span>
+              <span>
+                ✓ {t("registration.benefit.activities")}
+              </span>
+
+              <span>
+                ✓ {t("registration.benefit.integration")}
+              </span>
+
+              <span>
+                ✓ {t("registration.benefit.community")}
+              </span>
             </div>
           </div>
 
@@ -50,25 +58,38 @@ export default function RegistrationPageClient() {
         <div className="registration-main-container">
           <aside className="registration-sidebar">
             <div className="registration-sidebar-card">
-              <span className="registration-sidebar-number">01</span>
+              <span className="registration-sidebar-number">
+                01
+              </span>
+
               <h2>{t("registration.step1.title")}</h2>
+
               <p>{t("registration.step1.text")}</p>
             </div>
 
             <div className="registration-sidebar-card">
-              <span className="registration-sidebar-number">02</span>
+              <span className="registration-sidebar-number">
+                02
+              </span>
+
               <h2>{t("registration.step2.title")}</h2>
+
               <p>{t("registration.step2.text")}</p>
             </div>
 
             <div className="registration-sidebar-card">
-              <span className="registration-sidebar-number">03</span>
+              <span className="registration-sidebar-number">
+                03
+              </span>
+
               <h2>{t("registration.step3.title")}</h2>
+
               <p>{t("registration.step3.text")}</p>
             </div>
 
             <div className="registration-sidebar-help">
               <h2>{t("registration.help.title")}</h2>
+
               <p>{t("registration.help.text")}</p>
 
               <Link href="/#contact">
