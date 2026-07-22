@@ -1,24 +1,43 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import SmartMembershipModal from "../components/SmartMembershipModal";
-import { LanguageProvider } from "../components/LanguageProvider";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Damba SV Freiburg",
-  description: "Football, intégration et solidarité à Freiburg."
+  title: {
+    default: "Damba SV Freiburg",
+    template: "%s | Damba SV Freiburg",
+  },
+  description:
+    "Damba SV Freiburg, club de football, d’intégration et de solidarité à Freiburg im Breisgau.",
+  keywords: [
+    "Damba SV Freiburg",
+    "football Freiburg",
+    "club de football Freiburg",
+    "football loisirs Freiburg",
+    "intégration Freiburg",
+  ],
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="fr">
       <body>
-        <LanguageProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer /><SmartMembershipModal />
-        </LanguageProvider>
+        <Header />
+
+        <main className="site-main">{children}</main>
+
+        <Footer />
       </body>
     </html>
   );
