@@ -1,3 +1,21 @@
-"use client";
-import { ReactNode } from "react";
-export default function OpenMembershipButton({children,className="btn"}:{children:ReactNode,className?:string}){return <button type="button" className={className} onClick={()=>window.dispatchEvent(new Event("open-membership-modal"))}>{children}</button>}
+import type { ReactNode } from "react";
+import Link from "next/link";
+
+type OpenMembershipButtonProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+export default function OpenMembershipButton({
+  children,
+  className = "btn",
+}: OpenMembershipButtonProps) {
+  return (
+    <Link
+      href="/inscription"
+      className={className}
+    >
+      {children}
+    </Link>
+  );
+}
