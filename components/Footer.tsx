@@ -1,5 +1,70 @@
-"use client";
-import { Facebook, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import OpenMembershipButton from "./OpenMembershipButton";
-import { useLanguage } from "./LanguageProvider";
-export default function Footer(){const{t}=useLanguage();return <footer className="site-footer"><div className="container footer-grid"><div><strong className="footer-title">Damba SV Freiburg</strong><p>{t("footer.tagline")}</p><OpenMembershipButton className="footer-join">{t("footer.membership")}</OpenMembershipButton></div><div><strong>{t("footer.contact")}</strong><p><Mail size={17}/><a href="mailto:dambasportverein@gmail.com">dambasportverein@gmail.com</a></p><p><Phone size={17}/><a href="tel:+4917673206378">+49 176 73206378</a></p><p><MessageCircle size={17}/><a href="https://wa.me/4917673206378" target="_blank" rel="noreferrer">WhatsApp</a></p><p><Facebook size={17}/><a href="https://www.facebook.com/dambasv" target="_blank" rel="noreferrer">{t("footer.follow")}</a></p></div><div><strong>{t("training.kicker")}</strong><p><MapPin size={17}/><span>Schönbergstadion<br/>Wiesentalstraße 2<br/>79115 Freiburg im Breisgau</span></p><p>{t("footer.training")}</p></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Damba SV Freiburg</span><span>Sport · Integration · Solidarität</span></div></footer>}
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="site-footer" id="contact">
+      <div className="footer-container">
+        <div className="footer-column footer-about">
+          <div className="footer-logo-area">
+            <Image
+              src="/logo-damba.png"
+              alt="Logo de Damba SV Freiburg"
+              width={72}
+              height={72}
+              className="footer-logo"
+            />
+
+            <div>
+              <strong>Damba SV Freiburg</strong>
+              <p>Football, intégration et solidarité.</p>
+            </div>
+          </div>
+
+          <p className="footer-description">
+            Une communauté sportive ouverte, engagée et solidaire à Freiburg im
+            Breisgau.
+          </p>
+        </div>
+
+        <div className="footer-column">
+          <h2>Navigation</h2>
+
+          <Link href="/">Accueil</Link>
+          <Link href="/#club">Le club</Link>
+          <Link href="/#equipes">Nos équipes</Link>
+          <Link href="/#actualites">Actualités</Link>
+          <Link href="/inscription">Adhésion</Link>
+        </div>
+
+        <div className="footer-column">
+          <h2>Entraînement</h2>
+
+          <p>Samedi, 17h00–19h00</p>
+          <p>Schönbergstadion</p>
+          <p>Wiesentalstraße 2</p>
+          <p>79115 Freiburg im Breisgau</p>
+        </div>
+
+        <div className="footer-column">
+          <h2>Contact</h2>
+
+          <a href="mailto:contact@dambasv-freiburg.de">
+            contact@dambasv-freiburg.de
+          </a>
+
+          <Link href="/impressum">Impressum</Link>
+          <Link href="/datenschutz">Datenschutz</Link>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>
+          © {currentYear} Damba SV Freiburg. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+  );
+}
