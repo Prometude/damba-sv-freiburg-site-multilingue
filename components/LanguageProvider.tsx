@@ -205,6 +205,160 @@ const dictionaries: Record<Language, Dictionary> = {
     "smart.healthInsuranceYes": "Oui",
     "smart.healthInsuranceNo": "Non",
     "smart.healthInsurancePending": "En cours de clarification",
+
+    "registration.back": "Retour à l’accueil",
+"registration.kicker": "Rejoignez notre communauté",
+"registration.heading": "Devenir membre de Damba SV Freiburg",
+"registration.description":
+  "Football, intégration et solidarité : rejoignez un club où chacun peut progresser, participer et contribuer à la vie collective.",
+
+"registration.benefit.activities":
+  "Activités sportives régulières",
+"registration.benefit.integration":
+  "Intégration et solidarité",
+"registration.benefit.community":
+  "Communauté multiculturelle",
+
+"registration.step1.title":
+  "Remplissez le formulaire",
+"registration.step1.text":
+  "Indiquez vos coordonnées et le type d’adhésion souhaité.",
+
+"registration.step2.title":
+  "Étude de la demande",
+"registration.step2.text":
+  "Le comité examine les informations communiquées.",
+
+"registration.step3.title":
+  "Prise de contact",
+"registration.step3.text":
+  "Un responsable vous contacte pour vous présenter les prochaines étapes.",
+
+"registration.help.title":
+  "Besoin d’aide ?",
+"registration.help.text":
+  "Vous pouvez également utiliser la page de contact du club.",
+"registration.help.button":
+  "Contacter Damba",
+
+"registration.form.kicker":
+  "Formulaire officiel",
+"registration.form.title":
+  "Demande d’inscription",
+"registration.form.intro":
+  "Veuillez fournir des informations correctes. Elles seront utilisées uniquement pour examiner et traiter votre demande.",
+
+"membership.personal.title":
+  "Informations personnelles",
+"membership.personal.description":
+  "Renseignez les informations principales du futur membre.",
+
+"membership.firstName": "Prénom",
+"membership.lastName": "Nom",
+"membership.birthDate": "Date de naissance",
+"membership.type": "Type d’adhésion",
+"membership.select": "Sélectionner une option",
+
+"membership.type.leisure": "Équipe loisir",
+"membership.type.competitive": "Équipe compétitive",
+"membership.type.supporter": "Membre sympathisant",
+"membership.type.volunteer": "Bénévole",
+
+"membership.contact.title": "Coordonnées",
+"membership.contact.description":
+  "Ces informations permettent au club de vous contacter.",
+
+"membership.email": "Adresse e-mail",
+"membership.phone": "Téléphone",
+"membership.street": "Rue et numéro",
+"membership.postalCode": "Code postal",
+"membership.city": "Ville",
+
+"membership.sport.title": "Profil sportif",
+"membership.sport.description":
+  "Ces renseignements nous aident à mieux vous orienter.",
+
+"membership.footballLevel": "Niveau de football",
+"membership.level.select":
+  "Sélectionner votre niveau",
+"membership.level.beginner": "Débutant",
+"membership.level.leisure": "Loisir",
+"membership.level.intermediate": "Intermédiaire",
+"membership.level.advanced": "Avancé",
+"membership.level.competitive": "Compétition",
+
+"membership.position": "Poste préféré",
+"membership.position.select":
+  "Sélectionner un poste",
+"membership.position.goalkeeper": "Gardien",
+"membership.position.defender": "Défenseur",
+"membership.position.midfielder":
+  "Milieu de terrain",
+"membership.position.forward": "Attaquant",
+"membership.position.versatile": "Polyvalent",
+
+"membership.emergency.title":
+  "Contact d’urgence",
+"membership.emergency.description":
+  "Une personne à contacter en cas de nécessité.",
+"membership.emergency.name":
+  "Nom du contact",
+"membership.emergency.phone":
+  "Téléphone du contact",
+
+"membership.message":
+  "Informations complémentaires",
+"membership.message.placeholder":
+  "Présentez brièvement votre motivation, vos disponibilités ou toute information utile.",
+
+"membership.consent.title": "Consentements",
+"membership.consent.description":
+  "Veuillez confirmer les conditions nécessaires à l’inscription.",
+
+"membership.consent.privacy":
+  "J’accepte que mes données soient utilisées pour traiter ma demande d’adhésion conformément à la politique de confidentialité.",
+
+"membership.consent.rules":
+  "Je confirme avoir pris connaissance des règles, des valeurs et des obligations applicables aux membres de Damba SV Freiburg.",
+
+"membership.required":
+  "Les champs accompagnés d’un astérisque sont obligatoires.",
+
+"membership.submit":
+  "Envoyer ma demande d’inscription",
+
+"membership.submitting":
+  "Enregistrement en cours…",
+
+"membership.success.title":
+  "Inscription envoyée",
+
+"membership.success.message":
+  "Votre demande d’inscription a bien été enregistrée. Damba SV Freiburg vous contactera prochainement.",
+
+"membership.error.title":
+  "Veuillez vérifier le formulaire",
+
+"membership.error.name":
+  "Veuillez renseigner votre prénom et votre nom.",
+
+"membership.error.birthDate":
+  "Veuillez renseigner votre date de naissance.",
+
+"membership.error.contact":
+  "Veuillez renseigner votre adresse e-mail et votre téléphone.",
+
+"membership.error.type":
+  "Veuillez sélectionner un type d’adhésion.",
+
+"membership.error.privacy":
+  "Vous devez accepter la politique de confidentialité.",
+
+"membership.error.rules":
+  "Vous devez accepter les règles de Damba SV Freiburg.",
+
+"membership.error.server":
+  "Une erreur est survenue pendant l’inscription.",
   },
 
   en: {
@@ -389,6 +543,178 @@ const dictionaries: Record<Language, Dictionary> = {
     "smart.healthInsuranceYes": "Yes",
     "smart.healthInsuranceNo": "No",
     "smart.healthInsurancePending": "Currently being clarified",
+
+    "registration.back": "Back to home",
+"registration.kicker": "Join our community",
+"registration.heading":
+  "Become a member of Damba SV Freiburg",
+"registration.description":
+  "Football, integration and solidarity: join a club where everyone can grow, participate and contribute to community life.",
+
+"registration.benefit.activities":
+  "Regular sports activities",
+"registration.benefit.integration":
+  "Integration and solidarity",
+"registration.benefit.community":
+  "Multicultural community",
+
+"registration.step1.title":
+  "Complete the form",
+"registration.step1.text":
+  "Enter your contact details and choose the desired membership type.",
+
+"registration.step2.title":
+  "Application review",
+"registration.step2.text":
+  "The committee reviews the information submitted.",
+
+"registration.step3.title":
+  "Contact",
+"registration.step3.text":
+  "A club representative will contact you and explain the next steps.",
+
+"registration.help.title":
+  "Need help?",
+"registration.help.text":
+  "You can also use the club’s contact page.",
+"registration.help.button":
+  "Contact Damba",
+
+"registration.form.kicker":
+  "Official form",
+"registration.form.title":
+  "Membership application",
+"registration.form.intro":
+  "Please provide accurate information. It will only be used to review and process your application.",
+
+"membership.personal.title":
+  "Personal information",
+"membership.personal.description":
+  "Enter the main details of the future member.",
+
+"membership.firstName": "First name",
+"membership.lastName": "Last name",
+"membership.birthDate": "Date of birth",
+"membership.type": "Membership type",
+"membership.select": "Select an option",
+
+"membership.type.leisure":
+  "Leisure team",
+"membership.type.competitive":
+  "Competitive team",
+"membership.type.supporter":
+  "Supporting member",
+"membership.type.volunteer":
+  "Volunteer",
+
+"membership.contact.title":
+  "Contact details",
+"membership.contact.description":
+  "This information allows the club to contact you.",
+
+"membership.email": "Email address",
+"membership.phone": "Phone number",
+"membership.street":
+  "Street and house number",
+"membership.postalCode": "Postal code",
+"membership.city": "City",
+
+"membership.sport.title":
+  "Sporting profile",
+"membership.sport.description":
+  "This information helps us guide you appropriately.",
+
+"membership.footballLevel":
+  "Football level",
+"membership.level.select":
+  "Select your level",
+"membership.level.beginner": "Beginner",
+"membership.level.leisure": "Leisure",
+"membership.level.intermediate":
+  "Intermediate",
+"membership.level.advanced": "Advanced",
+"membership.level.competitive":
+  "Competitive",
+
+"membership.position":
+  "Preferred position",
+"membership.position.select":
+  "Select a position",
+"membership.position.goalkeeper":
+  "Goalkeeper",
+"membership.position.defender":
+  "Defender",
+"membership.position.midfielder":
+  "Midfielder",
+"membership.position.forward":
+  "Forward",
+"membership.position.versatile":
+  "Versatile",
+
+"membership.emergency.title":
+  "Emergency contact",
+"membership.emergency.description":
+  "A person who can be contacted in an emergency.",
+
+"membership.emergency.name":
+  "Contact name",
+"membership.emergency.phone":
+  "Contact phone number",
+
+"membership.message":
+  "Additional information",
+"membership.message.placeholder":
+  "Briefly describe your motivation, availability or any other useful information.",
+
+"membership.consent.title":
+  "Consent",
+"membership.consent.description":
+  "Please confirm the conditions required for registration.",
+
+"membership.consent.privacy":
+  "I agree that my data may be used to process my membership application in accordance with the privacy policy.",
+
+"membership.consent.rules":
+  "I confirm that I have read the rules, values and obligations applicable to members of Damba SV Freiburg.",
+
+"membership.required":
+  "Fields marked with an asterisk are required.",
+
+"membership.submit":
+  "Submit my membership application",
+
+"membership.submitting":
+  "Saving application…",
+
+"membership.success.title":
+  "Application submitted",
+
+"membership.success.message":
+  "Your membership application has been successfully saved. Damba SV Freiburg will contact you shortly.",
+
+"membership.error.title":
+  "Please check the form",
+
+"membership.error.name":
+  "Please enter your first and last name.",
+
+"membership.error.birthDate":
+  "Please enter your date of birth.",
+
+"membership.error.contact":
+  "Please enter your email address and phone number.",
+
+"membership.error.type":
+  "Please select a membership type.",
+
+"membership.error.privacy":
+  "You must accept the privacy policy.",
+
+"membership.error.rules":
+  "You must accept the rules of Damba SV Freiburg.",
+
+"membership.error.server":
+  "An error occurred during registration.",
   },
 
   de: {
@@ -576,6 +902,177 @@ const dictionaries: Record<Language, Dictionary> = {
     "smart.healthInsuranceYes": "Ja",
     "smart.healthInsuranceNo": "Nein",
     "smart.healthInsurancePending": "Wird derzeit geklärt",
+
+    "registration.back": "Zurück zur Startseite",
+"registration.kicker":
+  "Werden Sie Teil unserer Gemeinschaft",
+"registration.heading":
+  "Mitglied bei Damba SV Freiburg werden",
+"registration.description":
+  "Fußball, Integration und Solidarität: Werden Sie Teil eines Vereins, in dem sich jeder entwickeln, mitmachen und zum Gemeinschaftsleben beitragen kann.",
+
+"registration.benefit.activities":
+  "Regelmäßige sportliche Aktivitäten",
+"registration.benefit.integration":
+  "Integration und Solidarität",
+"registration.benefit.community":
+  "Multikulturelle Gemeinschaft",
+
+"registration.step1.title":
+  "Formular ausfüllen",
+"registration.step1.text":
+  "Geben Sie Ihre Kontaktdaten und die gewünschte Mitgliedschaft an.",
+
+"registration.step2.title":
+  "Prüfung des Antrags",
+"registration.step2.text":
+  "Der Vorstand prüft die übermittelten Informationen.",
+
+"registration.step3.title":
+  "Kontaktaufnahme",
+"registration.step3.text":
+  "Eine verantwortliche Person kontaktiert Sie und erklärt Ihnen die nächsten Schritte.",
+
+"registration.help.title":
+  "Brauchen Sie Hilfe?",
+"registration.help.text":
+  "Sie können auch die Kontaktseite des Vereins nutzen.",
+"registration.help.button":
+  "Damba kontaktieren",
+
+"registration.form.kicker":
+  "Offizielles Formular",
+"registration.form.title":
+  "Mitgliedsantrag",
+"registration.form.intro":
+  "Bitte geben Sie korrekte Informationen an. Diese werden ausschließlich zur Prüfung und Bearbeitung Ihres Antrags verwendet.",
+
+"membership.personal.title":
+  "Persönliche Angaben",
+"membership.personal.description":
+  "Geben Sie die wichtigsten Informationen über das zukünftige Mitglied an.",
+
+"membership.firstName": "Vorname",
+"membership.lastName": "Nachname",
+"membership.birthDate": "Geburtsdatum",
+"membership.type": "Art der Mitgliedschaft",
+"membership.select": "Bitte auswählen",
+
+"membership.type.leisure": "Freizeitmannschaft",
+"membership.type.competitive":
+  "Wettkampfmannschaft",
+"membership.type.supporter":
+  "Fördermitglied",
+"membership.type.volunteer":
+  "Ehrenamtliche Mitarbeit",
+
+"membership.contact.title": "Kontaktdaten",
+"membership.contact.description":
+  "Mit diesen Angaben kann der Verein Sie kontaktieren.",
+
+"membership.email": "E-Mail-Adresse",
+"membership.phone": "Telefonnummer",
+"membership.street": "Straße und Hausnummer",
+"membership.postalCode": "Postleitzahl",
+"membership.city": "Ort",
+
+"membership.sport.title":
+  "Sportliches Profil",
+"membership.sport.description":
+  "Diese Angaben helfen uns, Sie besser einzuordnen.",
+
+"membership.footballLevel":
+  "Fußballniveau",
+"membership.level.select":
+  "Niveau auswählen",
+"membership.level.beginner": "Anfänger",
+"membership.level.leisure": "Freizeit",
+"membership.level.intermediate":
+  "Fortgeschritten",
+"membership.level.advanced":
+  "Sehr fortgeschritten",
+"membership.level.competitive":
+  "Wettkampf",
+
+"membership.position":
+  "Bevorzugte Position",
+"membership.position.select":
+  "Position auswählen",
+"membership.position.goalkeeper":
+  "Torwart",
+"membership.position.defender":
+  "Verteidiger",
+"membership.position.midfielder":
+  "Mittelfeldspieler",
+"membership.position.forward":
+  "Stürmer",
+"membership.position.versatile":
+  "Vielseitig",
+
+"membership.emergency.title":
+  "Notfallkontakt",
+"membership.emergency.description":
+  "Eine Person, die im Notfall kontaktiert werden kann.",
+
+"membership.emergency.name":
+  "Name der Kontaktperson",
+"membership.emergency.phone":
+  "Telefonnummer der Kontaktperson",
+
+"membership.message":
+  "Zusätzliche Informationen",
+"membership.message.placeholder":
+  "Beschreiben Sie kurz Ihre Motivation, Ihre Verfügbarkeit oder andere wichtige Informationen.",
+
+"membership.consent.title":
+  "Einverständniserklärungen",
+"membership.consent.description":
+  "Bitte bestätigen Sie die für die Anmeldung erforderlichen Bedingungen.",
+
+"membership.consent.privacy":
+  "Ich bin damit einverstanden, dass meine Daten zur Bearbeitung meines Mitgliedsantrags gemäß der Datenschutzerklärung verwendet werden.",
+
+"membership.consent.rules":
+  "Ich bestätige, dass ich die Regeln, Werte und Pflichten der Mitglieder von Damba SV Freiburg zur Kenntnis genommen habe.",
+
+"membership.required":
+  "Mit einem Sternchen gekennzeichnete Felder sind Pflichtfelder.",
+
+"membership.submit":
+  "Mitgliedsantrag absenden",
+
+"membership.submitting":
+  "Antrag wird gespeichert…",
+
+"membership.success.title":
+  "Antrag wurde gesendet",
+
+"membership.success.message":
+  "Ihr Mitgliedsantrag wurde erfolgreich gespeichert. Damba SV Freiburg wird Sie in Kürze kontaktieren.",
+
+"membership.error.title":
+  "Bitte überprüfen Sie das Formular",
+
+"membership.error.name":
+  "Bitte geben Sie Ihren Vor- und Nachnamen an.",
+
+"membership.error.birthDate":
+  "Bitte geben Sie Ihr Geburtsdatum an.",
+
+"membership.error.contact":
+  "Bitte geben Sie Ihre E-Mail-Adresse und Telefonnummer an.",
+
+"membership.error.type":
+  "Bitte wählen Sie eine Art der Mitgliedschaft aus.",
+
+"membership.error.privacy":
+  "Sie müssen der Datenschutzerklärung zustimmen.",
+
+"membership.error.rules":
+  "Sie müssen den Regeln von Damba SV Freiburg zustimmen.",
+
+"membership.error.server":
+  "Bei der Anmeldung ist ein Fehler aufgetreten.",
   },
 };
 
