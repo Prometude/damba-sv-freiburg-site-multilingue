@@ -1,28 +1,25 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
+
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import {
+  LanguageProvider,
+} from "../components/LanguageProvider";
 
 export const metadata: Metadata = {
   title: {
     default: "Damba SV Freiburg",
     template: "%s | Damba SV Freiburg",
   },
-  description:
-    "Damba SV Freiburg, club de football, d’intégration et de solidarité à Freiburg im Breisgau.",
-  keywords: [
-    "Damba SV Freiburg",
-    "football Freiburg",
-    "club de football Freiburg",
-    "football loisirs Freiburg",
-    "intégration Freiburg",
-  ],
-};
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
+  description:
+    "Damba SV Freiburg : football, intégration, solidarité et engagement communautaire à Freiburg im Breisgau.",
+
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -33,11 +30,13 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        <Header />
+        <LanguageProvider>
+          <Header />
 
-        <main className="site-main">{children}</main>
+          {children}
 
-        <Footer />
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
