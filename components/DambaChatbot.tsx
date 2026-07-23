@@ -8,6 +8,8 @@ import {
   useState,
 } from "react";
 
+import { MessageCircle, X } from "lucide-react";
+
 type Language = "fr" | "en" | "de";
 type Step = "chat" | "contact";
 
@@ -536,7 +538,15 @@ export default function DambaChatbot() {
         onClick={() => setOpen((current) => !current)}
         aria-label={open ? t.close : t.open}
       >
-        {open ? "×" : "💬"}
+        {open ? (
+          <X size={27} strokeWidth={2.2} aria-hidden="true" />
+        ) : (
+          <MessageCircle
+            size={27}
+            strokeWidth={2.2}
+            aria-hidden="true"
+          />
+        )}
       </button>
     </div>
   );

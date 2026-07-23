@@ -1767,3 +1767,67 @@ textarea { resize: vertical; }
 .identity-discover-link:focus-visible {
   color: #a61f1f !important;
 }
+
+/* Correction finale — visibilité du chatbot sur téléphone */
+.damba-chatbot {
+  position: fixed !important;
+  right: max(14px, env(safe-area-inset-right)) !important;
+  bottom: max(18px, env(safe-area-inset-bottom)) !important;
+  z-index: 99999 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.damba-chatbot-launcher {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 58px !important;
+  height: 58px !important;
+  min-width: 58px !important;
+  min-height: 58px !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: #08733b !important;
+  color: #ffffff !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  font-size: 1.55rem !important;
+  line-height: 1 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32) !important;
+}
+
+@media (max-width: 600px) {
+  .damba-chatbot {
+    right: max(12px, env(safe-area-inset-right)) !important;
+    bottom: calc(18px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .damba-chatbot-launcher {
+    display: grid !important;
+    width: 58px !important;
+    height: 58px !important;
+  }
+
+  .damba-chatbot-window {
+    position: fixed !important;
+    right: 12px !important;
+    bottom: calc(88px + env(safe-area-inset-bottom)) !important;
+    width: calc(100vw - 24px) !important;
+    max-height: calc(100dvh - 115px) !important;
+  }
+}
+
+/* Icône SVG du chatbot */
+.damba-chatbot-launcher svg {
+  display: block !important;
+  width: 27px !important;
+  height: 27px !important;
+  color: #ffffff !important;
+  stroke: currentColor !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
