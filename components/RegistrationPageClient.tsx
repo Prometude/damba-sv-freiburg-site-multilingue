@@ -20,7 +20,7 @@ export default function RegistrationPageClient() {
             </Link>
 
             <span className="registration-kicker">
-              {t("registration.kicker")}
+              {t("registration.page.kicker")}
             </span>
 
             <h1>{t("registration.heading")}</h1>
@@ -44,7 +44,7 @@ export default function RegistrationPageClient() {
 
           <div className="registration-hero-logo">
             <Image
-              src="/logo_damba.png"
+              src="/damba.png"
               alt="Logo Damba SV Freiburg"
               width={220}
               height={220}
@@ -92,9 +92,7 @@ export default function RegistrationPageClient() {
 
               <p>{t("registration.help.text")}</p>
 
-              <Link href="/#contact">
-                {t("registration.help.button")}
-              </Link>
+              
             </div>
           </aside>
 

@@ -207,7 +207,7 @@ const dictionaries: Record<Language, Dictionary> = {
     "smart.healthInsurancePending": "En cours de clarification",
 
     "registration.back": "Retour à l’accueil",
-"registration.kicker": "Rejoignez notre communauté",
+"registration.page.kicker": "Rejoignez notre communauté",
 "registration.heading": "Devenir membre de Damba SV Freiburg",
 "registration.description":
   "Football, intégration et solidarité : rejoignez un club où chacun peut progresser, participer et contribuer à la vie collective.",
@@ -237,7 +237,7 @@ const dictionaries: Record<Language, Dictionary> = {
 "registration.help.title":
   "Besoin d’aide ?",
 "registration.help.text":
-  "Vous pouvez également utiliser la page de contact du club.",
+  "Vous pouvez également utiliser l'assistant Damba au bas de la page à l'angle droit ou laisser un message via cet assistant.",
 "registration.help.button":
   "Contacter Damba",
 
@@ -360,7 +360,6 @@ const dictionaries: Record<Language, Dictionary> = {
 "membership.error.server":
   "Une erreur est survenue pendant l’inscription.",
   },
-
   en: {
     "nav.home": "Home",
     "nav.club": "The club",
@@ -545,7 +544,7 @@ const dictionaries: Record<Language, Dictionary> = {
     "smart.healthInsurancePending": "Currently being clarified",
 
     "registration.back": "Back to home",
-"registration.kicker": "Join our community",
+"registration.page.kicker": "Join our community",
 "registration.heading":
   "Become a member of Damba SV Freiburg",
 "registration.description":
@@ -716,7 +715,6 @@ const dictionaries: Record<Language, Dictionary> = {
 "membership.error.server":
   "An error occurred during registration.",
   },
-
   de: {
     "nav.home": "Startseite",
     "nav.club": "Der Verein",
@@ -904,7 +902,7 @@ const dictionaries: Record<Language, Dictionary> = {
     "smart.healthInsurancePending": "Wird derzeit geklärt",
 
     "registration.back": "Zurück zur Startseite",
-"registration.kicker":
+"registration.page.kicker":
   "Werden Sie Teil unserer Gemeinschaft",
 "registration.heading":
   "Mitglied bei Damba SV Freiburg werden",

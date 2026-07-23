@@ -8,6 +8,8 @@ import {
   LanguageProvider,
 } from "../components/LanguageProvider";
 
+import DambaChatbot from "@/components/DambaChatbot";
+
 export const metadata: Metadata = {
   title: {
     default: "Damba SV Freiburg",
@@ -37,6 +39,7 @@ export default function RootLayout({
 
           <Footer />
         </LanguageProvider>
+              <DambaChatbot />
       </body>
     </html>
   );

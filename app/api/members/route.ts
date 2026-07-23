@@ -118,6 +118,50 @@ async function sendNotification(member: Record<string, unknown>, id: string) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
+    const street =
+      typeof body.street === "string"
+        ? body.street.trim()
+        : "";
+
+    const postalCode =
+      typeof body.postalCode === "string"
+        ? body.postalCode.trim()
+        : "";
+
+    const city =
+      typeof body.city === "string"
+        ? body.city.trim()
+        : "";
+
+    const address = [
+      street,
+      [postalCode, city]
+        .filter(Boolean)
+        .join(" "),
+    ]
+      .filter(Boolean)
+      .join(", ");
+
+    body.address = address;
+
+    // Correspondance entre les noms du formulaire et ceux attendus par l’API
+    body.emergencyName =
+      typeof body.emergencyContactName === "string"
+        ? body.emergencyContactName.trim()
+        : "";
+
+    body.emergencyPhone =
+      typeof body.emergencyContactPhone === "string"
+        ? body.emergencyContactPhone.trim()
+        : "";
+
+    // Consentement : les deux cases du formulaire doivent être cochées
+    body.consent =
+      body.privacyAccepted === true &&
+      body.rulesAccepted === true;
+
+
+
     const required = [
       "firstName",
       "lastName",

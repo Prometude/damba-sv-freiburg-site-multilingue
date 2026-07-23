@@ -3,3 +3,11 @@ node_modules
 .env*
 !.env.example
 .DS_Store
+
+*.sauvegarde
+*.sauvegarde-*
+*.avant-*
+*.avant-restauration
+*.avant-restauration-*
+app/page-inscription-erreur.tsx
+public/logo_damba_transparent.png
