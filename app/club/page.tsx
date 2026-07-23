@@ -28,7 +28,7 @@ const historyItems = [
   {
     year: "2026",
     title: "Nouvelle vision",
-    text: "Restructuration, formalisation des 7 piliers, Damba Care et projet de création officielle du Verein.",
+    text: "Restructuration, formalisation des 4 piliers, Damba Care et projet de création officielle du Verein.",
   },
   {
     year: "2030",
