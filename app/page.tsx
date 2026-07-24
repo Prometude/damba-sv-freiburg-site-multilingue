@@ -6,6 +6,9 @@ import { useEffect, useState } from "react";
 import { ArrowRight, CalendarDays, ChevronLeft, ChevronRight, HeartHandshake, MapPin, ShieldCheck, Trophy, Users } from "lucide-react";
 import { useLanguage } from "../components/LanguageProvider";
 import OpenMembershipButton from "../components/OpenMembershipButton";
+import TrainingAttendance from "../components/TrainingAttendance";
+
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function HomePage() {
   const { t } = useLanguage();
@@ -24,6 +27,7 @@ export default function HomePage() {
     {image:"/kunstrasen.png",title:t("news.two.title"),text:t("news.two.text")}
   ];
   return <>
+      <ScrollToTop />
     <section className="hero"><div className="container hero-grid">
       <div className="hero-copy"><span className="eyebrow">{t("hero.eyebrow")}</span><h1>{t("hero.title")}</h1><p>{t("hero.text")}</p>
         <div className="hero-actions"><OpenMembershipButton>{t("hero.join")} <ArrowRight size={18}/></OpenMembershipButton><Link href="#club" className="btn btn-ghost">{t("hero.discover")}</Link></div>
@@ -38,6 +42,8 @@ export default function HomePage() {
 </section>
 
     <section className="training-strip"><div className="container training-inner"><span className="training-icon"><CalendarDays/></span><div><span className="section-kicker light">{t("training.kicker")}</span><h2>{t("training.title")}</h2><p>{t("training.text")}</p></div><div className="training-place"><MapPin/><strong>{t("training.address")}</strong></div></div></section>
+
+    <TrainingAttendance />
 
     <section id="club" className="section"><div className="container split"><div><span className="section-kicker">{t("identity.kicker")}</span><h2>{t("identity.title")}</h2></div><div className="lead-block">
   <p>{t("identity.p1")}</p>

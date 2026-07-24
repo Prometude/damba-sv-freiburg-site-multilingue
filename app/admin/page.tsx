@@ -70,7 +70,27 @@ export default async function AdminMembersPage() {
           </p>
         </div>
 
-        <a
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 10,
+        }}>
+          <a
+            href="/admin/presences"
+            style={{
+              display: "inline-block",
+              padding: "12px 18px",
+              borderRadius: 8,
+              border: "1px solid #166534",
+              color: "#166534",
+              fontWeight: 700,
+              textDecoration: "none",
+            }}
+          >
+            Voir les présences
+          </a>
+
+          <a
           href="/api/admin/members/export"
           style={{
             display: "inline-block",
@@ -84,6 +104,7 @@ export default async function AdminMembersPage() {
         >
           Exporter en CSV
         </a>
+        </div>
       </div>
 
       <div
