@@ -11,3 +11,8 @@ node_modules
 *.avant-restauration-*
 app/page-inscription-erreur.tsx
 public/logo_damba_transparent.png
+backups/
+
+backups/
+*.backup
+*.bak

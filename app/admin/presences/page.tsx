@@ -16,6 +16,7 @@ type Attendance = {
   first_name: string;
   last_name: string;
   email: string | null;
+  guest_count: number;
   review_status:
     | "pending"
     | "approved"
@@ -67,6 +68,7 @@ export default async function AdminAttendancePage() {
             first_name,
             last_name,
             email,
+            guest_count,
             review_status,
             rejection_reason,
             updated_at
@@ -97,6 +99,8 @@ export default async function AdminAttendancePage() {
         item.last_name,
       email:
         item.email,
+      guestCount:
+        item.guest_count,
       status:
         item.review_status,
       rejectionReason:

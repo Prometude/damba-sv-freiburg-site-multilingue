@@ -25,6 +25,7 @@ type AttendanceRow = {
   first_name: string;
   last_name: string;
   email: string | null;
+  guest_count: number;
   attendance_status: "present" | "absent";
 };
 
@@ -105,6 +106,7 @@ export async function POST(
             first_name,
             last_name,
             email,
+            guest_count,
             attendance_status
           FROM training_attendance
           WHERE id = $1
@@ -212,6 +214,10 @@ export async function POST(
             "",
             `Votre participation à l’entraînement du ${trainingDate}, de 17 h 00 à 19 h 00, a été validée.`,
             "",
+            attendance.guest_count > 0
+              ? `Visiteurs autorisés : ${attendance.guest_count}.`
+              : "Aucun visiteur déclaré.",
+            "",
             "Lieu : Schönbergstadion, Wiesentalstraße 2, 79115 Freiburg im Breisgau.",
             "",
             "Sportivement,",
@@ -262,6 +268,16 @@ export async function POST(
           ${
             approved
               ? `
+                <p>
+                  <strong>Visiteurs déclarés :</strong>
+                  ${attendance.guest_count}
+                </p>
+
+                <p>
+                  <strong>Nombre total de personnes :</strong>
+                  ${1 + attendance.guest_count}
+                </p>
+
                 <p>
                   <strong>Lieu :</strong><br />
                   Schönbergstadion<br />

@@ -27,6 +27,8 @@ const dictionaries: Record<Language, Dictionary> = {
     "nav.activities": "Activités",
     "nav.news": "Actualités",
     "nav.join": "Devenir membre",
+    "nav.memberArea": "Espace membre",
+    "nav.memberLogin": "Se connecter à l’espace membre",
 
     "hero.eyebrow": "Damba SV Freiburg • Depuis 2024",
     "hero.title": "Plus qu’un club de football.",
@@ -34,6 +36,7 @@ const dictionaries: Record<Language, Dictionary> = {
       "Damba SV Freiburg rassemble des passionnés autour du sport, de l’intégration, de la discipline et de la solidarité.",
     "hero.join": "Devenir membre",
     "hero.discover": "Découvrir le club",
+    "hero.training": "Veux-tu Damba ?",
 
     "stats.teams": "équipes",
     "stats.pillars": "piliers",
@@ -366,6 +369,8 @@ const dictionaries: Record<Language, Dictionary> = {
     "nav.activities": "Activities",
     "nav.news": "News",
     "nav.join": "Become a member",
+    "nav.memberArea": "Member area",
+    "nav.memberLogin": "Sign in to the member area",
 
     "hero.eyebrow": "Damba SV Freiburg • Since 2024",
     "hero.title": "More than a football club.",
@@ -373,6 +378,7 @@ const dictionaries: Record<Language, Dictionary> = {
       "Damba SV Freiburg brings enthusiasts together around sport, integration, discipline and solidarity.",
     "hero.join": "Become a member",
     "hero.discover": "Discover the club",
+    "hero.training": "Do you want to train?",
 
     "stats.teams": "teams",
     "stats.pillars": "pillars",
@@ -721,6 +727,8 @@ const dictionaries: Record<Language, Dictionary> = {
     "nav.activities": "Aktivitäten",
     "nav.news": "Aktuelles",
     "nav.join": "Mitglied werden",
+    "nav.memberArea": "Mitgliederbereich",
+    "nav.memberLogin": "Im Mitgliederbereich anmelden",
 
     "hero.eyebrow": "Damba SV Freiburg • Seit 2024",
     "hero.title": "Mehr als ein Fußballverein.",
@@ -728,6 +736,7 @@ const dictionaries: Record<Language, Dictionary> = {
       "Damba SV Freiburg bringt Menschen durch Sport, Integration, Disziplin und Solidarität zusammen.",
     "hero.join": "Mitglied werden",
     "hero.discover": "Verein entdecken",
+    "hero.training": "Willst du trainieren?",
 
     "stats.teams": "Mannschaften",
     "stats.pillars": "Säulen",

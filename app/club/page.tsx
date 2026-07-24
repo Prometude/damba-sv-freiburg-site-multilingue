@@ -155,15 +155,6 @@ export default function ClubPage() {
               l&apos;intégration et l&apos;excellence.
             </p>
 
-            <div className="club-intro-actions">
-              <Link href="/inscription" className="club-btn club-btn-gold">
-                Rejoindre Damba
-              </Link>
-
-              <Link href="/#activites" className="club-btn club-btn-outline">
-                Découvrir nos piliers
-              </Link>
-            </div>
           </div>
 
           <aside className="club-motto-card">
@@ -280,6 +271,41 @@ export default function ClubPage() {
                 <p>{text}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="club-bottom-cta">
+        <div className="container club-bottom-cta-inner">
+          <div className="club-bottom-cta-copy">
+            <span className="club-kicker club-kicker-gold">
+              Rejoignez l’aventure
+            </span>
+
+            <h2>
+              Construisons ensemble l’avenir de Damba SV Freiburg.
+            </h2>
+
+            <p>
+              Rejoignez une communauté sportive fondée sur le respect,
+              la solidarité, l’intégration et le plaisir de jouer.
+            </p>
+          </div>
+
+          <div className="club-intro-actions club-bottom-cta-actions">
+            <Link
+              href="/inscription"
+              className="club-btn club-btn-gold"
+            >
+              Rejoindre Damba
+            </Link>
+
+            <Link
+              href="/#activites"
+              className="club-btn club-btn-outline"
+            >
+              Découvrir nos piliers
+            </Link>
           </div>
         </div>
       </section>

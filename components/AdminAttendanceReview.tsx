@@ -8,6 +8,7 @@ type AttendanceItem = {
   firstName: string;
   lastName: string;
   email: string | null;
+  guestCount: number;
   status:
     | "pending"
     | "approved"
@@ -164,6 +165,16 @@ export default function AdminAttendanceReview({
                     {item.email ||
                       "Adresse e-mail absente"}
                   </span>
+
+                  <p className="attendance-visitor-summary">
+                    <strong>Visiteurs :</strong>{" "}
+                    {item.guestCount}
+                    {" · "}
+                    <strong>Total attendu :</strong>{" "}
+                    {item.status === "absent"
+                      ? 0
+                      : 1 + item.guestCount}
+                  </p>
 
                   <small>
                     Mise à jour :{" "}

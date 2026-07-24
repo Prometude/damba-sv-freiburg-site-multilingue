@@ -30,7 +30,22 @@ export default function HomePage() {
       <ScrollToTop />
     <section className="hero"><div className="container hero-grid">
       <div className="hero-copy"><span className="eyebrow">{t("hero.eyebrow")}</span><h1>{t("hero.title")}</h1><p>{t("hero.text")}</p>
-        <div className="hero-actions"><OpenMembershipButton>{t("hero.join")} <ArrowRight size={18}/></OpenMembershipButton><Link href="#club" className="btn btn-ghost">{t("hero.discover")}</Link></div>
+        <div className="hero-actions">
+  <OpenMembershipButton>
+    {t("hero.join")} <ArrowRight size={18} />
+  </OpenMembershipButton>
+
+  <Link href="#club" className="btn btn-ghost">
+    {t("hero.discover")}
+  </Link>
+
+  <Link
+    href="#entrainement"
+    className="btn btn-training"
+  >
+    {t("hero.training")}
+  </Link>
+</div>
         <div className="stats"><div><strong>2</strong><span>{t("stats.teams")}</span></div><div><strong>4</strong><span>{t("stats.pillars")}</span></div><div><strong>1</strong><span>{t("stats.community")}</span></div></div>
       </div>
       <div className="hero-slider" aria-label="Damba SV Freiburg terrains">

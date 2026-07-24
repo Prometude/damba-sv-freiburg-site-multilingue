@@ -135,6 +135,7 @@ export default async function AdminMembersPage() {
                 "Type",
                 "Contact d’urgence",
                 "Référence",
+                "Gestion",
               ].map((title) => (
                 <th
                   key={title}
@@ -188,12 +189,36 @@ export default async function AdminMembersPage() {
                 >
                   {member.id}
                 </td>
+
+                <td
+                  style={{
+                    padding: 14,
+                    borderBottom:
+                      "1px solid #e2e8f0",
+                  }}
+                >
+                  <a
+                    href={`/admin/membres/${member.id}`}
+                    style={{
+                      display: "inline-block",
+                      padding: "9px 13px",
+                      borderRadius: 7,
+                      background: "#166534",
+                      color: "#ffffff",
+                      fontWeight: 700,
+                      textDecoration: "none",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    Gérer
+                  </a>
+                </td>
               </tr>
             ))}
 
             {members.length === 0 && (
               <tr>
-                <td colSpan={8} style={{ padding: 40, textAlign: "center" }}>
+                <td colSpan={9} style={{ padding: 40, textAlign: "center" }}>
                   Aucune demande d’adhésion enregistrée.
                 </td>
               </tr>

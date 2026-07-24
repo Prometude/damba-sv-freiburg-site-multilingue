@@ -14,6 +14,8 @@ type AttendancePayload = {
   lastName?: unknown;
   email?: unknown;
   status?: unknown;
+  guestCount?: unknown;
+  language?: unknown;
   website?: unknown;
 };
 
@@ -195,6 +197,20 @@ async function ensureAttendanceTable() {
   `);
 
   await pool.query(`
+    ALTER TABLE training_attendance
+    ADD COLUMN IF NOT EXISTS
+      guest_count INTEGER NOT NULL DEFAULT 0
+  `);
+
+  await pool.query(`
+    UPDATE training_attendance
+    SET guest_count = 0
+    WHERE guest_count IS NULL
+       OR guest_count < 0
+       OR guest_count > 3
+  `);
+
+  await pool.query(`
     CREATE INDEX IF NOT EXISTS
       training_attendance_date_idx
     ON training_attendance (
@@ -268,6 +284,25 @@ export async function POST(request: Request) {
         ? body.status
         : "";
 
+    const language =
+      body.language === "en" ||
+      body.language === "de"
+        ? body.language
+        : "fr";
+
+    const rawGuestCount =
+      typeof body.guestCount === "number"
+        ? body.guestCount
+        : Number(body.guestCount);
+
+    const guestCount =
+      status === "present" &&
+      Number.isInteger(rawGuestCount) &&
+      rawGuestCount >= 0 &&
+      rawGuestCount <= 3
+        ? rawGuestCount
+        : 0;
+
     if (firstName.length < 2) {
       return NextResponse.json(
         {
@@ -336,6 +371,7 @@ export async function POST(request: Request) {
           last_name,
           email,
           attendance_status,
+          guest_count,
           review_status
         )
         VALUES (
@@ -346,7 +382,8 @@ export async function POST(request: Request) {
           $4,
           $5,
           $6,
-          $7
+          $7,
+          $8
         )
         ON CONFLICT (
           training_date,
@@ -358,6 +395,8 @@ export async function POST(request: Request) {
           email = EXCLUDED.email,
           attendance_status =
             EXCLUDED.attendance_status,
+          guest_count =
+            EXCLUDED.guest_count,
           review_status =
             EXCLUDED.review_status,
           rejection_reason = NULL,
@@ -373,6 +412,7 @@ export async function POST(request: Request) {
         lastName,
         email,
         status,
+        guestCount,
         status === "present" ? "pending" : "absent",
       ]
     );
@@ -381,9 +421,17 @@ export async function POST(request: Request) {
       {
         success: true,
         message:
-          status === "present"
-            ? "Votre demande a été enregistrée. Un responsable doit examiner votre éligibilité. Vous recevrez la décision par e-mail."
-            : "Votre absence a bien été enregistrée.",
+          language === "en"
+            ? status === "present"
+              ? "Your request has been recorded. A club official will review it and you will receive the decision by email."
+              : "Your absence has been recorded."
+            : language === "de"
+              ? status === "present"
+                ? "Ihre Anfrage wurde gespeichert. Ein Verantwortlicher wird sie prüfen und Sie erhalten die Entscheidung per E-Mail."
+                : "Ihre Abwesenheit wurde gespeichert."
+              : status === "present"
+                ? "Votre demande a été enregistrée. Un responsable doit examiner votre éligibilité. Vous recevrez la décision par e-mail."
+                : "Votre absence a bien été enregistrée.",
       },
       {
         status: 201,
